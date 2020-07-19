@@ -1,0 +1,67 @@
+$primary-color: #333;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: $primary-color;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: inline-block;
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*Utilities*/
+
+// Buttons
+.btn {
+  border: solid 1px $primary-color;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  ion-icon {
+    margin-left: 0.8rem;
+  }
+}
+
+// Project-Item
+.project-item {
+  border: 1px solid black;
+  padding: 1rem;
+  &__info {
+    margin: 1rem 0;
+    p {
+      margin-top: 0.5rem;
+    }
+  }
+  &__ctas {
+    // border: solid red;
+    display: flex;
+    justify-content: space-between;
+    // margin: 1rem 0;
+  }
+}
