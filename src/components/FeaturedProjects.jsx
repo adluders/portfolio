@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import ProjectItem from "./ProjectItem";
+import CustomButton from "./UI/CustomButton";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
-const Projects = () => {
+const FeaturedProjects = () => {
   const projectState = [
     {
       id: 1,
@@ -40,11 +43,21 @@ const Projects = () => {
 
   return (
     <div className="projects">
-      {projects.map((project) => (
-        <ProjectItem project={project} />
-      ))}
+      {projects.map(
+        (project) => project.isFeatured && <ProjectItem project={project} />
+      )}
+
+      <div className="projects-cta">
+        <Link className="btn" to="/projects">
+          View All Projects <ion-icon name="arrow-forward-outline"></ion-icon>
+        </Link>
+      </div>
     </div>
   );
 };
 
-export default Projects;
+// <CustomButton
+//   text={"view all projects"}
+//   icon={<ion-icon name="arrow-forward-outline"></ion-icon>}
+// />
+export default FeaturedProjects;

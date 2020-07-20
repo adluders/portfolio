@@ -1,0 +1,26 @@
+@media screen and (max-width: 768px) {
+  .hero {
+    &-mssg {
+      font-size: 1.5rem;
+      margin: auto;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-form {
+    &__group {
+      input {
+        width: 100%;
+      }
+    }
+    textarea {
+      width: 398px;
+    }
+  }
+}

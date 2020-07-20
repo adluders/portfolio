@@ -1,13 +1,13 @@
 import React from "react";
 import Hero from "../components/Hero";
-import Projects from "../components/Projects";
+import FeaturedProjects from "../components/FeaturedProjects";
 import ContactForm from "../components/ContactForm";
 
 const Home = () => {
   return (
     <div className="home">
       <Hero />
-      <Projects />
+      <FeaturedProjects />
       <ContactForm />
     </div>
   );
