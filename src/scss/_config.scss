@@ -1,4 +1,6 @@
-$primary-color: #333;
+$dark-color: #333;
+$primary-color: #8860d0;
+$light-color: #f2f1ef;
 
 * {
   box-sizing: border-box;
@@ -8,12 +10,12 @@ $primary-color: #333;
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: $primary-color;
+  color: $dark-color;
 }
 
 a {
   text-decoration: none;
-  color: $primary-color;
+  color: $dark-color;
 }
 
 li {
@@ -35,7 +37,8 @@ img {
 // Buttons
 .btn {
   border: solid 1px $primary-color;
-  background-color: transparent;
+  background-color: $light-color;
+  color: $primary-color;
   display: flex;
   align-items: center;
   text-transform: uppercase;
@@ -43,6 +46,11 @@ img {
   border-radius: 0.3rem;
   font-size: 1rem;
   cursor: pointer;
+  &:hover {
+    background-color: darken($color: $primary-color, $amount: 10);
+    color: $light-color;
+    transition: all 0.4s ease-in;
+  }
   ion-icon {
     margin-left: 0.8rem;
   }
@@ -50,8 +58,11 @@ img {
 
 // Project-Item
 .project-item {
-  border: 1px solid black;
+  // border: 1px solid black;
   padding: 1rem;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 0.7rem;
+
   &__info {
     margin: 1rem 0;
     p {

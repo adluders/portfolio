@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectItem from "./ProjectItem";
-import CustomButton from "./UI/CustomButton";
+// import CustomButton from "./UI/CustomButton";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
@@ -39,12 +39,16 @@ const FeaturedProjects = () => {
 
   useEffect(() => {
     setProjects(projectState);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div className="projects">
       {projects.map(
-        (project) => project.isFeatured && <ProjectItem project={project} />
+        (project) =>
+          project.isFeatured && (
+            <ProjectItem key={project.id} project={project} />
+          )
       )}
 
       <div className="projects-cta">

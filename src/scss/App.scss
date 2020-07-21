@@ -35,6 +35,28 @@ nav {
     margin: 2rem 0;
     display: flex;
     justify-content: center;
+    .btn {
+      ion-icon {
+        font-size: 1.4rem;
+      }
+      &:hover ion-icon {
+        transform: rotate(90deg);
+        transition: all 0.3s ease;
+      }
+      &:focus {
+        outline: none;
+        // transform: scale(0.98);
+        animation: bounce 0.2s;
+      }
+    }
+  }
+  @keyframes bounce {
+    from {
+      transform: scale(0.98);
+    }
+    to {
+      transform: scale(1);
+    }
   }
 }
 
