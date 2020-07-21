@@ -1,6 +1,11 @@
 import React from "react";
 // import CustomButton from "./UI/CustomButton";
 import projectpreview from "../projectpreview.png";
+import htmlLogo from "../logo-html5.svg";
+import cssLogo from "../logo-css3.svg";
+import jsLogo from "../logo-javascript.svg";
+import reactLogo from "../logo-react.svg";
+import sassLogo from "../logo-sass.svg";
 
 const ProjectItem = ({ project }) => {
   return (
@@ -11,6 +16,16 @@ const ProjectItem = ({ project }) => {
       <div className="project-item__info">
         <h2> {project.name} </h2>
         <p>{project.project_description}</p>
+      </div>
+      <div className="project-item__stack">
+        <h3>Stack used</h3>
+        <div className="project-item__stack-logos">
+          <img src={htmlLogo} alt="logo" />
+          <img src={cssLogo} alt="logo" />
+          <img src={jsLogo} alt="logo" />
+          <img src={reactLogo} alt="logo" />
+          <img src={sassLogo} alt="logo" />
+        </div>
       </div>
       <div className="project-item__ctas">
         <a

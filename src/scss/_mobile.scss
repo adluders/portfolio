@@ -1,4 +1,8 @@
 @media screen and (max-width: 768px) {
+  .btn {
+    padding: 0.5rem 2rem;
+    font-size: 0.7rem;
+  }
   .hero {
     &-mssg {
       font-size: 1.5rem;
@@ -21,6 +25,14 @@
     }
     textarea {
       width: 398px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contact-form {
+    textarea {
+      max-width: 100%;
     }
   }
 }

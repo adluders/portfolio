@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import ProjectItem from "./ProjectItem";
 
 const Projects = () => {
@@ -36,6 +36,7 @@ const Projects = () => {
 
   useEffect(() => {
     setProjects(projectState);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

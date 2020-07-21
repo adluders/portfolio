@@ -36,7 +36,8 @@ img {
 
 // Buttons
 .btn {
-  border: solid 1px $primary-color;
+  // border: solid 1px $primary-color;
+  border: none;
   background-color: $light-color;
   color: $primary-color;
   display: flex;
@@ -67,6 +68,21 @@ img {
     margin: 1rem 0;
     p {
       margin-top: 0.5rem;
+    }
+  }
+  &__stack {
+    // border: solid red;
+    margin: 1rem 0;
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+    &-logos {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      img {
+        display: inline-block;
+        width: 30%;
+      }
     }
   }
   &__ctas {

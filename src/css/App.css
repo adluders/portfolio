@@ -30,7 +30,7 @@ img {
 
 /*Utilities*/
 .btn {
-  border: solid 1px #8860d0;
+  border: none;
   background-color: #f2f1ef;
   color: #8860d0;
   display: flex;
@@ -64,6 +64,24 @@ img {
 
 .project-item__info p {
   margin-top: 0.5rem;
+}
+
+.project-item__stack {
+  margin: 1rem 0;
+}
+
+.project-item__stack h3 {
+  margin-bottom: 0.5rem;
+}
+
+.project-item__stack-logos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.project-item__stack-logos img {
+  display: inline-block;
+  width: 30%;
 }
 
 .project-item__ctas {
@@ -173,6 +191,10 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  .btn {
+    padding: 0.5rem 2rem;
+    font-size: 0.7rem;
+  }
   .hero-mssg {
     font-size: 1.5rem;
     margin: auto;
@@ -188,6 +210,12 @@ footer {
   }
   .contact-form textarea {
     width: 398px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contact-form textarea {
+    max-width: 100%;
   }
 }
 /*# sourceMappingURL=App.css.map */
