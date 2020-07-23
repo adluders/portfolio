@@ -12,6 +12,7 @@ const Hero = () => {
 
       <div className="hero-cta">
         <CustomButton
+          customClass="btn-main"
           text={"view my work"}
           icon={<ion-icon name="arrow-forward-outline"></ion-icon>}
         />

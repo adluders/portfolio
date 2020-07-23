@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const CustomButton = ({ text, icon }) => {
+const CustomButton = ({ text, icon, customClass }) => {
   return (
-    <button className="btn">
+    <button className={`btn ${customClass}`}>
       {text} {icon}
     </button>
   );

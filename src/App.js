@@ -6,17 +6,20 @@ import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ProjectContext from "./context/ProjectContext";
 
 const App = () => {
   return (
-    <div className="container">
-      <Navbar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/projects" component={Portfolio} />
-      </Switch>
-      <Footer />
-    </div>
+    <ProjectContext>
+      <div className="container">
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/projects" component={Portfolio} />
+        </Switch>
+        <Footer />
+      </div>
+    </ProjectContext>
   );
 };
 

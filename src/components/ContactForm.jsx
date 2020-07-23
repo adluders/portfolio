@@ -25,6 +25,7 @@ const ContactForm = () => {
       <label htmlFor="message"></label>
 
       <CustomButton
+        customClass="btn-main"
         text="submit"
         icon={<ion-icon name="mail-outline"></ion-icon>}
       />
