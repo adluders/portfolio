@@ -20,7 +20,11 @@ const ProjectContextProvider = ({ children }) => {
       github_url: "https://github.com/adluders/rock-paper-scissors",
       demo_url: "https://adler-rps-game.netlify.app/",
       isFeatured: true,
-      stackUsed: [htmlLogo, cssLogo, jsLogo],
+      stackUsed: [
+        { id: 1, name: htmlLogo },
+        { id: 2, name: cssLogo },
+        { id: 3, name: jsLogo },
+      ],
       projectPreview: rps,
     },
     {
@@ -31,7 +35,10 @@ const ProjectContextProvider = ({ children }) => {
       github_url: "https://github.com/adluders/countries-api",
       demo_url: "https://adler-country-rest-api.netlify.app/",
       isFeatured: true,
-      stackUsed: [reactLogo, cssLogo],
+      stackUsed: [
+        { id: 1, name: reactLogo },
+        { id: 2, name: cssLogo },
+      ],
       projectPreview: countryPage,
     },
     {
@@ -42,7 +49,11 @@ const ProjectContextProvider = ({ children }) => {
       github_url: "https://github.com/adluders/bookmark-page",
       demo_url: "https://adler-bookmark-landing-page.netlify.app/",
       isFeatured: false,
-      stackUsed: [htmlLogo, sassLogo, jsLogo],
+      stackUsed: [
+        { id: 1, name: htmlLogo },
+        { id: 2, name: sassLogo },
+        { id: 3, name: jsLogo },
+      ],
       projectPreview: bookmarkPage,
     },
   ]);

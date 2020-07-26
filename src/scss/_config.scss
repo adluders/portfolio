@@ -1,6 +1,6 @@
 $dark-color: #333;
-$primary-color: #8860d0;
-$dark-primary: #6b3ac3;
+// $primary-color: #8860d0;
+$dark-primary: #692ffe;
 $light-color: #fcfcfc;
 
 * {
@@ -12,7 +12,7 @@ $light-color: #fcfcfc;
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: $dark-color;
-  background-color: $light-color;
+  background-color: rgb(250, 226, 255);
 }
 
 a {
@@ -78,6 +78,7 @@ img {
   padding: 1rem;
   box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.15);
   border-radius: 0.7rem;
+  background-color: $light-color;
 
   &__info {
     margin: 1rem 0;

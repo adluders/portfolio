@@ -14,7 +14,7 @@ const ProjectItem = ({ project }) => {
         <h3>Techs used to build project</h3>
         <div className="project-item__stack-logos">
           {project.stackUsed.map((stack) => (
-            <img src={stack} alt={stack} />
+            <img key={stack.id} src={stack.name} alt={stack.name} />
           ))}
         </div>
       </div>

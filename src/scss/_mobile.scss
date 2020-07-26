@@ -4,11 +4,27 @@
     font-size: 0.7rem;
   }
   .hero {
+    // grid-template-columns: 1fr;
+    // grid-template-rows: repeat(2, 1fr);
+    // border: red solid;
+    display: flex;
+    flex-direction: column;
     &-mssg {
       font-size: 1.5rem;
       margin: auto;
       width: 100%;
       text-align: center;
+      order: 1;
+      p:first-of-type {
+        margin: 2rem auto auto auto;
+      }
+    }
+    &-profile {
+      order: 0;
+    }
+    &-cta {
+      order: 2;
+      margin-top: 1rem;
     }
   }
 
@@ -18,14 +34,7 @@
   }
 
   .contact-form {
-    &__group {
-      input {
-        width: 100%;
-      }
-    }
-    textarea {
-      width: 398px;
-    }
+    width: auto;
   }
 }
 
