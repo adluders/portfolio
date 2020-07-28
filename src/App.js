@@ -7,6 +7,7 @@ import Portfolio from "./pages/Portfolio";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ProjectContext from "./context/ProjectContext";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
@@ -16,13 +17,12 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/projects" component={Portfolio} />
+          <Route exact path="/contact" component={Contact} />
         </Switch>
         <Footer />
       </div>
     </ProjectContext>
   );
 };
-
-// <Route exact path="/contact" component={Contact} />
 
 export default App;

@@ -3,16 +3,28 @@ import React from "react";
 import ProjectItem from "./ProjectItem";
 import { useContext } from "react";
 import { ProjectContext } from "../context/ProjectContext";
+import { motion } from "framer-motion";
 
 const Projects = () => {
+  const variants = {
+    start: { opacity: 0 },
+    final: { opacity: 1 },
+  };
+
   const { projects } = useContext(ProjectContext);
 
   return (
-    <div className="projects">
+    <motion.div
+      className="projects"
+      variants={variants}
+      initial="start"
+      animate="final"
+      transition={{ duration: 2 }}
+    >
       {projects.map((project) => (
         <ProjectItem key={project.id} project={project} />
       ))}
-    </div>
+    </motion.div>
   );
 };
 

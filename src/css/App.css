@@ -7,7 +7,7 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
-  background-color: #fae2ff;
+  background-color: #f1f1f1;
 }
 
 a {
@@ -49,10 +49,6 @@ img {
 
 .btn-secondary {
   background-color: #692ffe;
-}
-
-.btn:hover {
-  transition: all 0.4s ease-in;
 }
 
 .btn ion-icon {
@@ -193,7 +189,8 @@ nav .nav-link:hover {
 }
 
 .hero-cta .btn {
-  margin: auto;
+  margin: 0 auto;
+  width: 22%;
 }
 
 .hero-cta .btn ion-icon {
@@ -202,21 +199,11 @@ nav .nav-link:hover {
 
 .hero-cta .btn:hover ion-icon {
   transform: rotate(90deg);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-out;
 }
 
 .hero-cta .btn:focus {
   outline: none;
-  animation: bounce 0.2s;
-}
-
-@keyframes bounce {
-  from {
-    transform: scale(0.98);
-  }
-  to {
-    transform: scale(1);
-  }
 }
 
 .projects {
@@ -264,7 +251,7 @@ nav .nav-link:hover {
 
 footer {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -293,6 +280,9 @@ footer {
   .hero-cta {
     order: 2;
     margin-top: 1rem;
+  }
+  .hero-cta .btn {
+    width: 61%;
   }
   .projects {
     display: flex;

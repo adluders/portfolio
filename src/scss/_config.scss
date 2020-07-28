@@ -12,7 +12,7 @@ $light-color: #fcfcfc;
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: $dark-color;
-  background-color: rgb(250, 226, 255);
+  background-color: #f1f1f1;
 }
 
 a {
@@ -36,10 +36,6 @@ img {
 
 /*Utilities*/
 
-@function updateColor($currColor) {
-  @return lighten($currColor, 10);
-}
-
 // Buttons
 .btn {
   // border: solid 1px $primary-color;
@@ -62,11 +58,11 @@ img {
     // background-color: #c2bb3a;
     background-color: $dark-primary;
   }
-  &:hover {
-    // background-color: lighten($color: $dark-primary, $amount: 10);
-    // color: $light-color;
-    transition: all 0.4s ease-in;
-  }
+  // &:hover {
+  // background-color: lighten($color: $dark-primary, $amount: 10);
+  // color: $light-color;
+  // transition: all 0.4s ease-in;
+  // }
   ion-icon {
     margin-left: 0.8rem;
   }

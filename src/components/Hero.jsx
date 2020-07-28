@@ -1,7 +1,6 @@
 import React from "react";
-import CustomButton from "./UI/CustomButton";
-// import Profile from "../profile.jpg";
 import Illustration from "../illustration.png";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -45,11 +44,9 @@ const Hero = () => {
       </div>
 
       <div className="hero-cta">
-        <CustomButton
-          customClass="btn-main"
-          text={"view my work"}
-          icon={<ion-icon name="arrow-forward-outline"></ion-icon>}
-        />
+        <Link className="btn btn-main" to="featured_projects" smooth={true}>
+          view my work<ion-icon name="arrow-forward-outline"></ion-icon>
+        </Link>
       </div>
     </div>
   );

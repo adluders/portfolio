@@ -92,30 +92,20 @@ nav {
     // }
   }
   &-cta {
-    // border: solid red;
     grid-column: 1/3;
     .btn {
-      margin: auto;
+      margin: 0 auto;
+      width: 22%;
       ion-icon {
         font-size: 1.4rem;
       }
       &:hover ion-icon {
         transform: rotate(90deg);
-        transition: all 0.3s ease;
+        transition: all 0.3s ease-out;
       }
       &:focus {
         outline: none;
-        // transform: scale(0.98);
-        animation: bounce 0.2s;
       }
-    }
-  }
-  @keyframes bounce {
-    from {
-      transform: scale(0.98);
-    }
-    to {
-      transform: scale(1);
     }
   }
 }
@@ -167,7 +157,7 @@ nav {
 // Footer
 footer {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
