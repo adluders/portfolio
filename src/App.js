@@ -8,12 +8,21 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ProjectContext from "./context/ProjectContext";
 import Contact from "./pages/Contact";
+import { useState } from "react";
+import { useEffect } from "react";
+import MobileNav from "./components/MobileNav";
 
 const App = () => {
+  const [isMobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    window.innerWidth < 500 && setMobile(true);
+  }, []);
+
   return (
     <ProjectContext>
+      {isMobile ? <MobileNav /> : <Navbar />}
       <div className="container">
-        <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/projects" component={Portfolio} />

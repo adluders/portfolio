@@ -1,15 +1,29 @@
 @import "./config";
 
+// App
+.home ~ .btn {
+  position: fixed;
+  bottom: 10%;
+  right: 2%;
+  ion-icon {
+    margin: 0;
+  }
+}
+
 // Navbar
 nav {
-  // border: solid red;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  position: sticky;
   margin: 0.5rem 0;
+  top: 0;
+  &.active-nav {
+    background-color: #fff;
+    z-index: 2;
+    box-shadow: 2px 0px 15px 2px rgba($color: #000000, $alpha: 0.25);
+  }
   .nav-items {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
   }
   .nav-item {
     margin: 1rem;
@@ -117,11 +131,17 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3.5rem;
-  margin: 5rem 0;
   &-cta {
     grid-column: 1/3;
     display: flex;
     justify-content: flex-end;
+  }
+  h1 {
+    grid-column: 1/3;
+    text-align: center;
+  }
+  &#featured_projects {
+    margin: 5rem 0;
   }
 }
 

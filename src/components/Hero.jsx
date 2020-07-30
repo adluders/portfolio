@@ -44,7 +44,12 @@ const Hero = () => {
       </div>
 
       <div className="hero-cta">
-        <Link className="btn btn-main" to="featured_projects" smooth={true}>
+        <Link
+          className="btn btn-main"
+          to="featured_projects"
+          smooth={true}
+          offset={-90}
+        >
           view my work<ion-icon name="arrow-forward-outline"></ion-icon>
         </Link>
       </div>

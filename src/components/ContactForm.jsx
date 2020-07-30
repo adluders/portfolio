@@ -1,9 +1,21 @@
 import React from "react";
 import CustomButton from "./UI/CustomButton";
+import { motion } from "framer-motion";
 
 const ContactForm = () => {
+  const variants = {
+    start: { opacity: 0 },
+    final: { opacity: 1 },
+  };
+
   return (
-    <form className="contact-form">
+    <motion.form
+      className="contact-form"
+      variants={variants}
+      initial="start"
+      animate="final"
+      transition={{ duration: 2 }}
+    >
       <h2>Let's Get in touch</h2>
 
       <div className="contact-form__group">
@@ -29,7 +41,7 @@ const ContactForm = () => {
         text="submit"
         icon={<ion-icon name="mail-outline"></ion-icon>}
       />
-    </form>
+    </motion.form>
   );
 };
 

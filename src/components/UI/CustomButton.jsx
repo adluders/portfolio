@@ -22,6 +22,6 @@ const CustomButton = ({ text, icon, customClass }) => {
 
 CustomButton.propTypes = { text: PropTypes.string.isRequired };
 
-CustomButton.defaultProps = { icon: null };
+CustomButton.defaultProps = { icon: null, customClass: "" };
 
 export default CustomButton;

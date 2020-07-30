@@ -21,6 +21,7 @@ const Projects = () => {
       animate="final"
       transition={{ duration: 2 }}
     >
+      <h1>My Work</h1>
       {projects.map((project) => (
         <ProjectItem key={project.id} project={project} />
       ))}
