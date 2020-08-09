@@ -1,6 +1,8 @@
-$dark-color: #333;
-$dark-primary: #692ffe;
-$light-color: #fcfcfc;
+$light-shadow: #fafafa;
+$dark-shadow: #c4c4c4;
+$light-color: #e6e7ee;
+$dark-color: #44476a;
+$primary-color: #0444bf;
 
 * {
   box-sizing: border-box;
@@ -9,9 +11,9 @@ $light-color: #fcfcfc;
 }
 
 body {
+  background-color: $light-color;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: $dark-color;
-  background-color: #f1f1f1;
 }
 
 a {
@@ -29,68 +31,100 @@ img {
 }
 
 .container {
-  width: 80%;
+  width: 90%;
+  // max-width: 1200px;
   margin: 0 auto;
+  // padding: 0.5rem 1rem;
 }
 
-/*Utilities*/
-
-// Buttons
-.btn {
-  border: none;
-  color: $light-color;
+.cta {
+  // border: 1px solid black;
+  text-transform: uppercase;
+  padding: 0.5rem 2.5rem;
+  box-shadow: 3px 2px 5px 2px $dark-shadow, -3px -4px 5px 2px $light-shadow;
+  border-radius: 0.3rem;
+  font-weight: 600;
   display: flex;
   align-items: center;
-  text-transform: uppercase;
-  padding: 1rem 2.5rem;
-  border-radius: 0.3rem;
-  font-size: 1rem;
+  justify-content: center;
+  text-align: center;
+  border: none;
   cursor: pointer;
-  background-color: $dark-primary;
-  &:focus {
-    outline: none;
+  // ion-icon {
+  //   align-self: center;
+  //   margin: auto;
+  // }
+  &:hover {
+    box-shadow: inset 2px 2px 2px 0px $dark-shadow,
+      inset -2px -2px 2px 0px $light-shadow;
   }
   &-main {
-    background-color: $dark-primary;
-  }
-  &-secondary {
-    background-color: $dark-primary;
-  }
-  ion-icon {
-    margin-left: 0.8rem;
+    color: $primary-color;
   }
 }
 
-// Project-Item
 .project-item {
+  // border: solid red;
+  margin: 2rem 0;
   padding: 1rem;
-  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.15);
-  border-radius: 0.7rem;
-  background-color: $light-color;
-
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  box-shadow: 2px 2px 5px 0px $dark-shadow, 5px 5px 5px 0 $dark-shadow,
+    -2px -2px 5px 0px $light-shadow, -5px -5px 5px 0px $light-shadow;
+  border-radius: 0.5rem;
+  &__ctas {
+    // border: solid yellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 55%;
+  }
   &__info {
-    margin: 1rem 0;
-    height: 100px;
-    p {
-      margin-top: 0.5rem;
+    // border: solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__description {
+    // border: solid yellow;
+    margin: 1.3rem 0;
+  }
+  &__graphics {
+    // border: 3px black solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__preview {
+    // width: 75%;
+    margin: 0 auto;
+    // border: solid blue;
+    box-shadow: inset 3px 3px 2px 0px $dark-shadow,
+      inset -3px -3px 2px 0px $light-shadow;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    img {
+      // border: 1px green solid;
+      z-index: -1;
+      border-radius: 0.5rem;
+      position: relative;
     }
   }
   &__stack {
-    margin: 1rem 0;
-    h3 {
-      margin-bottom: 0.5rem;
-    }
-    &-logos {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      img {
-        display: inline-block;
-        width: 30%;
-      }
-    }
-  }
-  &__ctas {
+    // border: 1px solid purple;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    // justify-content: space-between;
+    // grid-template-columns: repeat(5, 1fr);
+    img {
+      // border: solid yellow;
+      display: inline-block;
+      width: 7%;
+      margin: 1rem 5rem 0 0;
+      padding: 0.4rem;
+      box-shadow: inset 2px 2px 5px 0px $dark-shadow,
+        inset -2px -2px 5px 0px $light-shadow;
+    }
   }
 }

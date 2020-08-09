@@ -1,17 +1,13 @@
-import React from "react";
-import ProjectItem from "./ProjectItem";
-// import CustomButton from "./UI/CustomButton";
-// import { useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-// import { useEffect } from "react";
-import { useContext } from "react";
+import ProjectItem from "./UI/ProjectItem";
 import { ProjectContext } from "../context/ProjectContext";
 
 const FeaturedProjects = () => {
   const { projects } = useContext(ProjectContext);
 
   return (
-    <div className="projects" id="featured_projects">
+    <div className="container">
       {projects.map(
         (project) =>
           project.isFeatured && (
@@ -20,7 +16,7 @@ const FeaturedProjects = () => {
       )}
 
       <div className="projects-cta">
-        <Link className="btn btn-main" to="/projects">
+        <Link className="cta " to="/projects">
           View All Projects <ion-icon name="arrow-forward-outline"></ion-icon>
         </Link>
       </div>
@@ -28,8 +24,4 @@ const FeaturedProjects = () => {
   );
 };
 
-// <CustomButton
-//   text={"view all projects"}
-//   icon={<ion-icon name="arrow-forward-outline"></ion-icon>}
-// />
 export default FeaturedProjects;

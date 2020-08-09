@@ -1,21 +1,13 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
-import { useState } from "react";
 
 const Navbar = () => {
-  const [navBg, setNavBg] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () =>
-      window.pageYOffset > 50 ? setNavBg(true) : setNavBg(false)
-    );
-  }, []);
-
   return (
-    <nav className={navBg ? "active-nav" : undefined}>
+    <nav className="main-nav">
       <div className="container">
+        <div className="logo">
+          <h1>AL</h1>
+        </div>
         <ul className="nav-items">
           <li className="nav-item">
             <Link to="/" className="nav-link">

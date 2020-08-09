@@ -7,16 +7,14 @@ import ProjectContext from "./context/ProjectContext";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
-
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Footer from "./components/UI/Footer";
 
 const App = () => {
   return (
     <ProjectContext>
-      <Navbar />
       {/*isMobile ? <MobileNav /> : <Navbar />*/}
-      <div className="container">
+
+      <div className="">
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/projects" component={Portfolio} />
@@ -27,5 +25,11 @@ const App = () => {
     </ProjectContext>
   );
 };
+/**
+ * Hero
+ * Nav
+ * Routes
+ * Footer
+ */
 
 export default App;
