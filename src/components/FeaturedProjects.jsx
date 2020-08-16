@@ -7,7 +7,7 @@ const FeaturedProjects = () => {
   const { projects } = useContext(ProjectContext);
 
   return (
-    <div className="container">
+    <div className="container" id="featured_projects">
       {projects.map(
         (project) =>
           project.isFeatured && (

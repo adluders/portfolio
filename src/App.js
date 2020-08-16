@@ -12,16 +12,12 @@ import Footer from "./components/UI/Footer";
 const App = () => {
   return (
     <ProjectContext>
-      {/*isMobile ? <MobileNav /> : <Navbar />*/}
-
-      <div className="">
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/projects" component={Portfolio} />
-          <Route exact path="/contact" component={Contact} />
-        </Switch>
-        <Footer />
-      </div>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/projects" component={Portfolio} />
+        <Route exact path="/contact" component={Contact} />
+      </Switch>
+      <Footer />
     </ProjectContext>
   );
 };

@@ -7,16 +7,22 @@
 body {
   background-color: #e6e7ee;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #44476a;
+  color: #2a354f;
 }
 
 a {
   text-decoration: none;
-  color: #44476a;
+  color: #2a354f;
 }
 
 li {
   list-style: none;
+}
+
+button {
+  outline: none;
+  background-color: transparent;
+  border: none;
 }
 
 img {
@@ -48,7 +54,11 @@ img {
 }
 
 .cta-main {
-  color: #0444bf;
+  color: #fa5252;
+}
+
+.cta-github {
+  color: #333;
 }
 
 .project-item {
@@ -64,7 +74,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 55%;
+  width: 100%;
+  max-width: 326px;
 }
 
 .project-item__info {
@@ -104,16 +115,22 @@ img {
 
 .project-item__stack img {
   display: inline-block;
+  min-width: 41.37px;
   width: 7%;
   margin: 1rem 5rem 0 0;
   padding: 0.4rem;
   box-shadow: inset 2px 2px 5px 0px #c4c4c4, inset -2px -2px 5px 0px #fafafa;
 }
 
+.mobile-nav {
+  display: none;
+}
+
 .top-nav {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 0;
+  align-items: center;
+  padding: 0.8rem 0;
 }
 
 .icons {
@@ -121,7 +138,7 @@ img {
   align-items: center;
 }
 
-.icon-link {
+.icons .icon__link {
   margin: 0 1rem;
   padding: 0.2rem 0.8rem;
   box-shadow: 3px 2px 5px 2px #c4c4c4, -3px -2px 5px 0px #fafafa;
@@ -129,17 +146,26 @@ img {
   border-radius: 0.1rem;
 }
 
-.icon-link:hover {
+.icons .icon__link:hover {
   box-shadow: inset 2px 2px 2px 0px #c4c4c4, inset -2px -2px 2px 0px #fafafa;
 }
 
+.icons .icon__link.icon__link-twitter {
+  color: #00acee;
+}
+
+.icons .icon__link.icon__link-github {
+  color: #333;
+}
+
 .hero {
-  height: 70vh;
+  height: 88vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .hero h1 {
@@ -260,5 +286,62 @@ img {
 footer {
   margin: 2rem 0 1rem 0;
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+  .container .top-nav {
+    width: 100%;
+  }
+  .top-nav {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    align-items: flex-end;
+    padding-right: 1rem;
+  }
+  .mobile-nav__items {
+    margin-bottom: 4rem;
+  }
+  .mobile-nav__item {
+    margin: 3rem 0;
+  }
+  .mobile-nav__close {
+    font-size: 2rem;
+    padding: 0.4rem;
+  }
+  .mobile-nav__toggle {
+    font-size: 2rem;
+  }
+  .project-item {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .contact-form__details {
+    flex-direction: column;
+  }
+  .contact-form__details .icons {
+    justify-content: center;
+  }
+  .contact-form__groups {
+    margin-bottom: 1rem;
+  }
+  .contact-form__group {
+    width: 100%;
+  }
+  .contact-form__submit .cta {
+    width: 100%;
+    margin: 2rem 0;
+  }
 }
 /*# sourceMappingURL=App.css.map */

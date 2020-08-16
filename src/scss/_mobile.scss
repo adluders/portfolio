@@ -1,0 +1,68 @@
+// includes tablets, landscape views and below
+@media screen and (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+
+  .container {
+    .top-nav {
+      width: 100%;
+    }
+  }
+
+  .top-nav {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    align-items: flex-end;
+    padding-right: 1rem;
+    &__items {
+      margin-bottom: 4rem;
+    }
+    &__item {
+      margin: 3rem 0;
+    }
+    &__close {
+      font-size: 2rem;
+      padding: 0.4rem;
+    }
+    &__toggle {
+      font-size: 2rem;
+    }
+  }
+
+  .project-item {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .contact-form {
+    &__details {
+      flex-direction: column;
+      .icons {
+        justify-content: center;
+      }
+    }
+    &__groups {
+      margin-bottom: 1rem;
+    }
+    &__group {
+      width: 100%;
+    }
+    &__submit {
+      .cta {
+        width: 100%;
+        margin: 2rem 0;
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@ const IconBar = () => {
       <li className="icon">
         <a
           href="https://codepen.io/adluders"
-          className="icon-link"
+          className="icon__link"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -16,7 +16,7 @@ const IconBar = () => {
       <li className="icon">
         <a
           href="https://twitter.com/just_a_devguy"
-          className="icon-link"
+          className="icon__link icon__link-twitter"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -26,7 +26,7 @@ const IconBar = () => {
       <li className="icon">
         <a
           href="https://github.com/adluders"
-          className="icon-link"
+          className="icon__link icon__link-github"
           target="_blank"
           rel="noopener noreferrer"
         >
