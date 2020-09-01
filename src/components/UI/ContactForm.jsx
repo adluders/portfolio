@@ -42,7 +42,9 @@ const ContactForm = () => {
           </div>
 
           <div className="contact-form__submit">
-            <input type="submit" value="submit" className="cta cta-main" />
+            <button type="submit" className="cta cta-main">
+              submit
+            </button>
           </div>
         </div>
 
