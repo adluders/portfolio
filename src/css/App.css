@@ -40,9 +40,6 @@ img {
   text-transform: uppercase;
   padding: 1rem 3.5rem;
   font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   border: 2px solid transparent;
   cursor: pointer;
@@ -391,13 +388,15 @@ footer {
   .contact-form__group {
     width: 100%;
   }
+  .contact-form__submit {
+    margin: 2rem 0;
+  }
   .contact-form__submit .cta {
     width: 100%;
-    margin: 2rem 0;
   }
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .hero,
   .portfolio,
   .contact {
