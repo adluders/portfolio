@@ -16,7 +16,7 @@ const FeaturedProjects = () => {
       )}
 
       <div className="projects-cta">
-        <Link className="cta " to="/projects">
+        <Link className="cta cta-main" to="/projects">
           View All Projects <ion-icon name="arrow-forward-outline"></ion-icon>
         </Link>
       </div>

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poiret+One&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +7,7 @@
 
 body {
   background-color: #e6e7ee;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #2a354f;
 }
 
@@ -37,27 +38,38 @@ img {
 
 .cta {
   text-transform: uppercase;
-  padding: 0.5rem 2.5rem;
-  box-shadow: 3px 2px 5px 2px #c4c4c4, -3px -4px 5px 2px #fafafa;
-  border-radius: 0.3rem;
+  padding: 1rem 3.5rem;
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: none;
+  border: 2px solid transparent;
   cursor: pointer;
+  color: #e6e7ee;
+  display: flex;
+  align-items: center;
 }
 
 .cta:hover {
-  box-shadow: inset 2px 2px 2px 0px #c4c4c4, inset -2px -2px 2px 0px #fafafa;
+  background-color: transparent;
 }
 
 .cta-main {
-  color: #fa5252;
+  background-color: #b93cf6;
+}
+
+.cta-main:hover {
+  border: 2px solid #b93cf6;
+  color: #b93cf6;
 }
 
 .cta-github {
+  background-color: #333;
+}
+
+.cta-github:hover {
+  border: 2px solid #333;
   color: #333;
 }
 
@@ -66,8 +78,13 @@ img {
   padding: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  box-shadow: 2px 2px 5px 0px #c4c4c4, 5px 5px 5px 0 #c4c4c4, -2px -2px 5px 0px #fafafa, -5px -5px 5px 0px #fafafa;
+  box-shadow: 0px 2px 3px 1px #c4c4c4;
   border-radius: 0.5rem;
+}
+
+.project-item__title {
+  font-family: "Poiret One", cursive;
+  letter-spacing: 0.3rem;
 }
 
 .project-item__ctas {
@@ -75,7 +92,7 @@ img {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 326px;
+  max-width: 500px;
 }
 
 .project-item__info {
@@ -96,7 +113,6 @@ img {
 
 .project-item__preview {
   margin: 0 auto;
-  box-shadow: inset 3px 3px 2px 0px #c4c4c4, inset -3px -3px 2px 0px #fafafa;
   padding: 10px;
   background-color: transparent;
   border-radius: 0.5rem;
@@ -119,7 +135,6 @@ img {
   width: 7%;
   margin: 1rem 5rem 0 0;
   padding: 0.4rem;
-  box-shadow: inset 2px 2px 5px 0px #c4c4c4, inset -2px -2px 5px 0px #fafafa;
 }
 
 .mobile-nav {
@@ -138,16 +153,17 @@ img {
   align-items: center;
 }
 
+.icons .icon:hover {
+  transform: rotateY(360deg);
+  transition: all 1.4s;
+}
+
 .icons .icon__link {
   margin: 0 1rem;
   padding: 0.2rem 0.8rem;
-  box-shadow: 3px 2px 5px 2px #c4c4c4, -3px -2px 5px 0px #fafafa;
   font-size: 1.3rem;
   border-radius: 0.1rem;
-}
-
-.icons .icon__link:hover {
-  box-shadow: inset 2px 2px 2px 0px #c4c4c4, inset -2px -2px 2px 0px #fafafa;
+  border: 2px solid #c4c4c4;
 }
 
 .icons .icon__link.icon__link-twitter {
@@ -160,6 +176,13 @@ img {
 
 .hero {
   height: 88vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.hero-info {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -168,11 +191,13 @@ img {
   text-align: center;
 }
 
-.hero h1 {
+.hero-info h1 {
   font-size: 3.2rem;
+  letter-spacing: 0.4rem;
+  font-family: "Poiret One", cursive;
 }
 
-.hero p {
+.hero-info p {
   margin: 2rem 0;
 }
 
@@ -181,7 +206,8 @@ img {
   padding: 1rem 0;
   position: sticky;
   top: 0;
-  background-color: #fff;
+  background-color: #e6e7ee;
+  box-shadow: 0px 15px 18px 0px rgba(0, 0, 0, 0.3);
   z-index: 2;
 }
 
@@ -222,17 +248,25 @@ img {
   margin-left: auto;
 }
 
+.projects-cta .cta ion-icon {
+  margin-left: 5px;
+  margin-top: 3px;
+}
+
 .contact-form {
   margin-top: 4rem;
 }
 
 .contact-form__header {
+  font-family: "Poiret One", cursive;
+  letter-spacing: 0.2rem;
   text-align: center;
   text-transform: capitalize;
 }
 
 .contact-form__header h3 {
   margin: 1rem 0;
+  font-size: 2.1rem;
 }
 
 .contact-form__details {
@@ -253,16 +287,16 @@ img {
 
 .contact-form__group label {
   text-transform: uppercase;
-  margin: 0.4rem 0;
+  margin: 0.8rem 0;
+  font-family: "Poiret One", cursive;
+  font-weight: 700;
 }
 
 .contact-form__group input {
   padding: 0.8rem 0.5rem;
   font-size: 1.2rem;
-  border: none;
-  border-radius: 0.2rem;
+  border: 1px solid #c4c4c4;
   background-color: #e6e7ee;
-  box-shadow: inset 4px 4px 4px 0px #c4c4c4, inset -3px -3px 6px 0px #fafafa;
 }
 
 .contact-form__group input:focus {
@@ -272,11 +306,9 @@ img {
 .contact-form__group textarea {
   resize: none;
   font-size: 1.2rem;
-  border: none;
-  border-radius: 0.2rem;
+  border: 1px solid #c4c4c4;
   padding: 0.5rem;
   background-color: #e6e7ee;
-  box-shadow: inset 4px 4px 4px 0px #c4c4c4, inset -3px -3px 6px 0px #fafafa;
 }
 
 .contact-form__group textarea:focus {
@@ -286,6 +318,8 @@ img {
 footer {
   margin: 2rem 0 1rem 0;
   text-align: center;
+  font-family: "Poiret One", cursive;
+  font-weight: 900;
 }
 
 @media screen and (max-width: 768px) {
@@ -300,6 +334,7 @@ footer {
     margin: 0 auto;
   }
   .mobile-nav {
+    z-index: 3;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -309,11 +344,16 @@ footer {
     background-color: #fff;
     align-items: flex-end;
     padding-right: 1rem;
+    font-family: "Poiret One", cursive;
+    font-weight: 600;
+    line-height: 1.4rem;
+    letter-spacing: 0.1rem;
   }
   .mobile-nav__items {
     margin-bottom: 4rem;
   }
   .mobile-nav__item {
+    text-align: left;
     margin: 3rem 0;
   }
   .mobile-nav__close {
@@ -322,6 +362,9 @@ footer {
   }
   .mobile-nav__toggle {
     font-size: 2rem;
+  }
+  .hero {
+    grid-template-columns: 1fr;
   }
   .project-item {
     display: flex;
@@ -342,6 +385,12 @@ footer {
   .contact-form__submit .cta {
     width: 100%;
     margin: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .project-item__ctas .cta {
+    padding: 0.5rem 2rem;
   }
 }
 /*# sourceMappingURL=App.css.map */

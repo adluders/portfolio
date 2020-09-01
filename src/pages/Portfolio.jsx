@@ -28,7 +28,7 @@ const Portfolio = () => {
       variants={variants}
       initial="start"
       animate="final"
-      transition={{ duration: 2 }}
+      transition={{ duration: 1 }}
     >
       {windowWidth < 768 ? <TopNav /> : <Navbar />}
       <div className="container">

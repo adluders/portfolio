@@ -16,10 +16,20 @@ const ProjectItem = ({ project }) => {
         <h2 className="project-item__title">{name}</h2>
         <p className="project-item__description">{project_description}</p>
         <div className="project-item__ctas">
-          <a href={github_url} className="cta cta-github">
+          <a
+            href={github_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta cta-github"
+          >
             github
           </a>
-          <a href={demo_url} className="cta cta-main">
+          <a
+            href={demo_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta cta-main"
+          >
             live demo
           </a>
         </div>

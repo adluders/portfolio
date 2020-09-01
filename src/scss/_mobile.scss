@@ -16,6 +16,7 @@
   }
 
   .mobile-nav {
+    z-index: 3;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -25,10 +26,15 @@
     background-color: #fff;
     align-items: flex-end;
     padding-right: 1rem;
+    font-family: "Poiret One", cursive;
+    font-weight: 600;
+    line-height: 1.4rem;
+    letter-spacing: 0.1rem;
     &__items {
       margin-bottom: 4rem;
     }
     &__item {
+      text-align: left;
       margin: 3rem 0;
     }
     &__close {
@@ -38,6 +44,10 @@
     &__toggle {
       font-size: 2rem;
     }
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
   }
 
   .project-item {
@@ -63,6 +73,14 @@
         width: 100%;
         margin: 2rem 0;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .project-item__ctas {
+    .cta {
+      padding: 0.5rem 2rem;
     }
   }
 }

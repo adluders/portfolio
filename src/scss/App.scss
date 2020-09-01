@@ -7,7 +7,6 @@
 
 // Top Nav
 .top-nav {
-  // border: solid 1px black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,16 +18,16 @@
   display: flex;
   align-items: center;
   .icon {
+    &:hover {
+      transform: rotateY(360deg);
+      transition: all 1.4s;
+    }
     &__link {
       margin: 0 1rem;
       padding: 0.2rem 0.8rem;
-      box-shadow: 3px 2px 5px 2px $dark-shadow, -3px -2px 5px 0px $light-shadow;
       font-size: 1.3rem;
       border-radius: 0.1rem;
-      &:hover {
-        box-shadow: inset 2px 2px 2px 0px $dark-shadow,
-          inset -2px -2px 2px 0px $light-shadow;
-      }
+      border: 2px solid $dark-shadow;
 
       &.icon__link-twitter {
         color: #00acee;
@@ -44,46 +43,51 @@
 // Hero
 .hero {
   height: 88vh;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  text-align: center;
-  h1 {
-    font-size: 3.2rem;
-  }
-  p {
-    margin: 2rem 0;
+  &-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+    h1 {
+      font-size: 3.2rem;
+      letter-spacing: 0.4rem;
+      font-family: "Poiret One", cursive;
+    }
+    p {
+      margin: 2rem 0;
+    }
   }
 }
 
 // Navbar
 .main-nav {
-  // border: solid black 1px;
   margin-bottom: 0.5rem;
   padding: 1rem 0;
   position: sticky;
   top: 0;
-  background-color: #fff;
+  background-color: $light-color;
+
+  // background-color: #fff;
+  box-shadow: 0px 15px 18px 0px rgba(0, 0, 0, 0.3);
   z-index: 2;
   .logo {
-    // border: solid green;
     max-width: max-content;
   }
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    // justify-content: space-between;
     align-items: center;
-    // border: solid purple 1px;
   }
   .nav-items {
     display: flex;
-    // border: 1px solid red;
     margin-left: auto;
     .nav-item {
-      // border: 1px solid yellow;
       margin: 0 1.2rem;
       .nav-link {
         padding: 0.5rem;
@@ -102,6 +106,10 @@
   margin: 1rem 0;
   .cta {
     margin-left: auto;
+    ion-icon {
+      margin-left: 5px;
+      margin-top: 3px;
+    }
   }
 }
 
@@ -109,10 +117,13 @@
 .contact-form {
   margin-top: 4rem;
   &__header {
+    font-family: "Poiret One", cursive;
+    letter-spacing: 0.2rem;
     text-align: center;
     text-transform: capitalize;
     h3 {
       margin: 1rem 0;
+      font-size: 2.1rem;
     }
   }
 
@@ -130,16 +141,15 @@
     width: 70%;
     label {
       text-transform: uppercase;
-      margin: 0.4rem 0;
+      margin: 0.8rem 0;
+      font-family: "Poiret One", cursive;
+      font-weight: 700;
     }
     input {
       padding: 0.8rem 0.5rem;
       font-size: 1.2rem;
-      border: none;
-      border-radius: 0.2rem;
+      border: 1px solid $dark-shadow;
       background-color: $light-color;
-      box-shadow: inset 4px 4px 4px 0px $dark-shadow,
-        inset -3px -3px 6px 0px $light-shadow;
       &:focus {
         outline: none;
       }
@@ -147,12 +157,9 @@
     textarea {
       resize: none;
       font-size: 1.2rem;
-      border: none;
-      border-radius: 0.2rem;
+      border: 1px solid $dark-shadow;
       padding: 0.5rem;
       background-color: $light-color;
-      box-shadow: inset 4px 4px 4px 0px $dark-shadow,
-        inset -3px -3px 6px 0px $light-shadow;
       &:focus {
         outline: none;
       }
@@ -164,6 +171,8 @@
 footer {
   margin: 2rem 0 1rem 0;
   text-align: center;
+  font-family: "Poiret One", cursive;
+  font-weight: 900;
 }
 
 @import "./mobile";
