@@ -19,7 +19,7 @@ const TopNav = () => {
   return (
     <div className="top-nav">
       <h1>{""}</h1>
-      {windowWidth < 768 ? (
+      {windowWidth <= 768 ? (
         <button className="mobile-nav__toggle" onClick={toggleNav}>
           <ion-icon name="menu-outline"></ion-icon>
         </button>

@@ -27,7 +27,7 @@ const Contact = () => {
       animate="final"
       transition={{ duration: 1 }}
     >
-      {windowWidth < 768 ? <TopNav /> : <Navbar />}
+      {windowWidth <= 768 ? <TopNav /> : <Navbar />}
 
       <ContactForm />
     </motion.div>

@@ -30,7 +30,7 @@ const Portfolio = () => {
       animate="final"
       transition={{ duration: 1 }}
     >
-      {windowWidth < 768 ? <TopNav /> : <Navbar />}
+      {windowWidth <= 768 ? <TopNav /> : <Navbar />}
       <div className="container">
         {projects.map((project) => (
           <ProjectItem key={project.id} project={project} />
