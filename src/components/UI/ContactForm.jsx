@@ -3,7 +3,8 @@ import IconBar from "./IconBar";
 
 const ContactForm = () => {
   return (
-    <form className="contact-form container">
+    <form className="contact-form container" name="contact" method="POST">
+      <input type="hidden" name="form-name" value="contact" />
       <div className="contact-form__header">
         <h3>would you like to work with me? perfect!</h3>
       </div>
