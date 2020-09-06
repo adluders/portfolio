@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
-import { motion } from "framer-motion";
-import Navbar from "../components/UI/Navbar";
-import TopNav from "../components/UI/TopNav";
-import ContactForm from "../components/UI/ContactForm";
 
-const Contact = () => {
+import TopNav from "../components/UI/TopNav";
+import Navbar from "../components/UI/Navbar";
+
+const NotFound = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const updateWidth = () => setWindowWidth(window.innerWidth);
@@ -15,24 +14,12 @@ const Contact = () => {
     return () => window.removeEventListener("resize", updateWidth);
   }, []);
 
-  const variants = {
-    start: { opacity: 0 },
-    final: { opacity: 1 },
-  };
-
   return (
-    <motion.div
-      className="contact"
-      variants={variants}
-      initial="start"
-      animate="final"
-      transition={{ duration: 1 }}
-    >
+    <div>
       {windowWidth <= 768 ? <TopNav /> : <Navbar />}
-
-      <ContactForm />
-    </motion.div>
+      <h1>Page Not Found</h1>
+    </div>
   );
 };
 
-export default withRouter(Contact);
+export default withRouter(NotFound);

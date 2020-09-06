@@ -4,6 +4,7 @@ import Navbar from "../components/UI/Navbar";
 import { ProjectContext } from "../context/ProjectContext";
 import ProjectItem from "../components/UI/ProjectItem";
 import TopNav from "../components/UI/TopNav";
+import { withRouter } from "react-router-dom";
 
 const Portfolio = () => {
   const { projects } = useContext(ProjectContext);
@@ -40,4 +41,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default withRouter(Portfolio);

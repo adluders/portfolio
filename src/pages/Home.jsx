@@ -5,6 +5,7 @@ import ContactForm from "../components/UI/ContactForm";
 
 import Hero from "../components/Hero";
 import Navbar from "../components/UI/Navbar";
+import { withRouter } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -17,4 +18,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default withRouter(Home);

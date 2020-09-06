@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import Footer from "./components/UI/Footer";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route exact path="/" component={Home} />
         <Route exact path="/projects" component={Portfolio} />
         <Route exact path="/contact" component={Contact} />
+        <Route path="*" component={NotFound} />
       </Switch>
       <Footer />
     </ProjectContext>
